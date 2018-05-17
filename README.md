@@ -2,7 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
+## 说明
+ 1. 练习 react redux router
+## 问题
+ 1. sass 保存会报错。编辑器的问题，多保存几次，或者修改空白
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
