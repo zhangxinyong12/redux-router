@@ -9,7 +9,6 @@ class Home extends Component {
     
   }
   render() {
-    console.log(2)
     return (
       <div className='home'>
         <HomeHeader chooseLesson={this.chooseLesson} />

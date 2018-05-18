@@ -6,6 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
  1. 练习 react redux router
 ## 问题
  1. sass 保存会报错。编辑器的问题，多保存几次，或者修改空白
+ 2. 如果有第三方库。比如 new MAap() 这个时候会报找不到，解决 const MAap=window.MAap 
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)

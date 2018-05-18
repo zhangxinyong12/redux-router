@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import './product.css';
 
-export default class Product extends Component {
+import Banner from '../../components/product/banner';
+
+class Product extends Component {
   render() {
     return (
       <div className='product'>
-        <h2>product</h2>
+        <Banner />
       </div>
     )
   }
 }
+export default  connect()(Product)
