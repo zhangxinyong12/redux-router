@@ -34,7 +34,7 @@ const commonFetcdh = (url, options, method = 'GET') => {
             body: JSON.stringify(options)
         }
     };
-    return fetch(url, initObj).then((res) => {
+    return fetch(url, initObj).then((res) => {//切记返回 
         return res.json()
     }).then((res) => {
         return res
