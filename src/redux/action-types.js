@@ -1,1 +1,2 @@
 export const CHECK_LESSON='CHECK_LESSON';
+export const GET_HOME_BANNER_IMG='GET_HOME_BANNER_IMG';

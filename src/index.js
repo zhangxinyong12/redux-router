@@ -8,6 +8,8 @@ import './index.css';
 import App from './containers/App';
 import store from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
+
+window._store=store;
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
