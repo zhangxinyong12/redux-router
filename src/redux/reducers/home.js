@@ -33,7 +33,6 @@ export default (state = init, action) => {
                 }
             }
         case actionType.GET_HOME_LESSON_LIST:
-        console.log(action)
             return {
                 ...state,
                 lessonList:{

@@ -19,9 +19,7 @@ export default class ScrollList extends Component {
                     //距离底部多少
                     if(scrollTop+offsetHeight+90>scrollHeight&&this.props.isMore&&!this.props.isLoading){
                         this.props.get_lesson(url_list+'&page='+this.props.page+'&limit=5');
-                        console.log('执行');
                     };
-                    console.log(scrollTop,offsetHeight,scrollHeight);
                 // },50);
                 
             });
