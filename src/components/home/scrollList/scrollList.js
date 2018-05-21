@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './scrollList.css';
 
 export default class ScrollList extends Component {
     constructor(){
@@ -30,7 +31,7 @@ export default class ScrollList extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='scroll'>
                 {this.props.children}
             </div>
         )
