@@ -13,14 +13,14 @@ export default class ScrollList extends Component {
         if(nextProps.element&&!this.state.isaddEvent){
             nextProps.element.addEventListener('scroll',()=>{
                 //节流
-                this.scroll_time?clearTimeout(this.scroll_time):'';
-                // this.scroll_time=setTimeout(()=>{
-                    let {scrollTop,offsetHeight,scrollHeight}=nextProps.element;
+                clearTimeout(this.scroll_time);
+                let {scrollTop,offsetHeight,scrollHeight}=nextProps.element;                
+                this.scroll_time=setTimeout(()=>{
                     //距离底部多少
-                    if(scrollTop+offsetHeight+90>scrollHeight&&this.props.isMore&&!this.props.isLoading){
+                    if(scrollTop+offsetHeight+50>scrollHeight&&this.props.isMore&&!this.props.isLoading){
                         this.props.get_lesson(url_list+'&page='+this.props.page+'&limit=5');
                     };
-                // },50);
+                },30);
                 
             });
             this.setState({
