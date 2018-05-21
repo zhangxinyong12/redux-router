@@ -7,7 +7,7 @@ export const check_lesson=(val,text)=>{
     }
 }
 //使用 redux-thunk
-export const get_banner=(url,options)=>(dispatch)=>{
+export const get_banner=(url,options)=>(dispatch,getState)=>{
     home_banner(url,options).then(bannerList=>{
         dispatch({
             type:actionType.GET_HOME_BANNER_IMG,

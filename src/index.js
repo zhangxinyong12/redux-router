@@ -9,6 +9,8 @@ import App from './containers/App';
 import store from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
 
+import vConsole from './vconsole';
+
 window._store=store;
 ReactDOM.render((
     <Provider store={store}>

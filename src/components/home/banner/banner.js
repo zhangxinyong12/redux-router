@@ -30,26 +30,27 @@ export default class HomeBanner extends Component {
     }
     render() {
         const data = this.props.dataImg;
-        
-
             let dataImg = [];
-            dataImg.push(data.showapi_res_body.data.img_1366);
-            dataImg.push(data.showapi_res_body.data.img_1366);
-            dataImg.push(data.showapi_res_body.data.img_1366);
-            dataImg.push(data.showapi_res_body.data.img_1366);
-            dataImg.push(data.showapi_res_body.data.img_1920);
-            dataImg.push(data.showapi_res_body.data.img_1920);
-            console.log(dataImg)
+            console.log(data)
+            if(data.showapi_res_body){
+                dataImg.push(data.showapi_res_body.data.img_1366);
+                dataImg.push(data.showapi_res_body.data.img_1366);
+                dataImg.push(data.showapi_res_body.data.img_1366);
+                dataImg.push(data.showapi_res_body.data.img_1366);
+                dataImg.push(data.showapi_res_body.data.img_1920);
+                dataImg.push(data.showapi_res_body.data.img_1920);
+            }
+            
             return (
                 <div className='home-banner'>
                     <div className="swiper-container">
                         <div className="swiper-wrapper">
                             {
-                                dataImg.map((item, index) => (
+                                data.showapi_res_body?dataImg.map((item, index) => (
                                     <div key={index} className="swiper-slide">
                                         <img src={item} alt="" />
                                     </div>
-                                ))
+                                )):''
                             }
 
                         </div>

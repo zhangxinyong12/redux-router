@@ -19,7 +19,6 @@ const commonFetcdh = (url, options, method = 'GET') => {
     const searchStr = obj2String(options)
     let initObj = {}
     if (method === 'GET') { // 如果是GET请求，拼接url
-        url += '?' + searchStr
         initObj = {
             method: method,
         }

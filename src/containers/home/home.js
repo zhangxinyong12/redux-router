@@ -7,9 +7,8 @@ import {home_banner} from '../../http-server/home';
 import HomeBanner from '../../components/home/banner/banner';
 class Home extends Component {
   componentDidMount(){
-    const url='http://route.showapi.com/1287-1'; 
-    this.props.get_banner(url,{showapi_appid:'32747',showapi_sign:'732aec4f8b344e74804bcc060f3a50dc'});
-    
+    const url='http://route.showapi.com/1287-1?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc'; 
+    this.props.get_banner(url);  
   }
   chooseLesson=(type,text)=>{
     this.props.check_lesson(type,text);
