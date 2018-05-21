@@ -11,9 +11,9 @@ export default class LessonList extends Component {
         <ul>
           {dataList.list.map((item,index)=>(
             <li key={index}>
-              <img src={item.url} alt=""/>
-              <h4>{item.title}</h4>
-              <h5>{item.prise}</h5>
+              <img src={item.img} alt=""/>
+              <h4>{item.hosName}</h4>
+              <h5>{item.level}</h5>
             </li>
           ))}
         </ul>

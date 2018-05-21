@@ -8,8 +8,7 @@ const init = {
         list:[],
         isMore:false,
         isLoading:false,
-        pageSize:5,
-        pageNumber:0
+        page:0
     }
 }
 export default (state = init, action) => {
@@ -34,15 +33,15 @@ export default (state = init, action) => {
                 }
             }
         case actionType.GET_HOME_LESSON_LIST:
+        console.log(action)
             return {
                 ...state,
                 lessonList:{
                     ...state.lessonList,
-                    list:[...state.lessonList.list,...action.lessonList],
+                    list:[...state.lessonList.list,...action.lessonList.hospitalList],
                     isMore:true,
                     isLoading:false,
-                    pageSize:5,
-                    pageNumber:0
+                    page:state.lessonList.page+1
                 }
             }
         default:

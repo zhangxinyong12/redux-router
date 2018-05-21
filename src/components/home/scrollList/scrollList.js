@@ -8,19 +8,21 @@ export default class ScrollList extends Component {
         }
     }
     componentWillReceiveProps(nextProps){
+        
+        const url_list = 'http://route.showapi.com/87-60?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc&provinceName=上海';
         if(nextProps.element&&!this.state.isaddEvent){
             nextProps.element.addEventListener('scroll',()=>{
-                const url_list = './datajson/home.json';                
                 //节流
-                clearTimeout(this.scroll_time);
-                this.scroll_time=setTimeout(()=>{
+                this.scroll_time?clearTimeout(this.scroll_time):'';
+                // this.scroll_time=setTimeout(()=>{
                     let {scrollTop,offsetHeight,scrollHeight}=nextProps.element;
                     //距离底部多少
                     if(scrollTop+offsetHeight+90>scrollHeight&&this.props.isMore&&!this.props.isLoading){
-                        this.props.get_lesson(url_list);
-                        clearTimeout(this.scroll_time);
+                        this.props.get_lesson(url_list+'&page='+this.props.page+'&limit=5');
+                        console.log('执行');
                     };
-                },50);
+                    console.log(scrollTop,offsetHeight,scrollHeight);
+                // },50);
                 
             });
             this.setState({

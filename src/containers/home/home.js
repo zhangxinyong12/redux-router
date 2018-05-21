@@ -11,8 +11,8 @@ class Home extends Component {
   componentDidMount() {
     const url = 'http://route.showapi.com/1287-1?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc';
     this.props.get_banner(url);
-    const url_list = './datajson/home.json';
-    this.props.get_lesson(url_list);
+    const url_list = 'http://route.showapi.com/87-60?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc&provinceName=上海';
+    this.props.get_lesson(url_list+'&page=1&limit=5');
   }
   chooseLesson = (type, text) => {
     this.props.check_lesson(type, text);
@@ -28,6 +28,7 @@ class Home extends Component {
             isMore={isMore}
             isLoading={isLoading}
             get_lesson={this.props.get_lesson}
+            page={this.props.home.lessonList.page}
           >
             {this.props.home.bannerList ? <HomeBanner dataImg={this.props.home.bannerList} /> : ''}
             <LessonList dataList={this.props.home.lessonList} />

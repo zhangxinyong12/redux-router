@@ -17,18 +17,16 @@ export const get_banner=(url,options)=>(dispatch,getState)=>{
     })
 }
 //获取课程列表
-export const get_lesson=(url,options)=>(dispatch,getState)=>(
+export const get_lesson=(url)=>(dispatch,getState)=>(
     dispatch({
         type:actionType.AJAX_START
     }),
-    GET(url,options).then(data=>{
-        const lessonList=data.data;
-        setTimeout(()=>{
+    GET(url).then(data=>{
+        const lessonList=data.showapi_res_body;
             dispatch({
                 type:actionType.GET_HOME_LESSON_LIST,
                 lessonList
             })
-        },3000);
         
     })
 )
