@@ -31,7 +31,6 @@ export default class HomeBanner extends Component {
     render() {
         const data = this.props.dataImg;
             let dataImg = [];
-            console.log(data)
             if(data.showapi_res_body){
                 dataImg.push(data.showapi_res_body.data.img_1366);
                 dataImg.push(data.showapi_res_body.data.img_1366);

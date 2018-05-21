@@ -1,0 +1,29 @@
+{
+    "data":[
+        {
+            "url":"./imges/banner-01.jpg",
+            "title":"前端培训课程-01",
+            "prise":"2000"
+        },
+        {
+            "url":"./imges/banner-02.jpg",
+            "title":"前端培训课程-02",
+            "prise":"3000"
+        },
+        {
+            "url":"./imges/banner-03.jpg",
+            "title":"前端培训课程-03",
+            "prise":"3000"
+        },
+        {
+            "url":"./imges/banner-04.jpg",
+            "title":"前端培训课程-04",
+            "prise":"4000"
+        },
+        {
+            "url":"./imges/banner-01.jpg",
+            "title":"前端培训课程",
+            "prise":"2000"
+        }
+    ]
+}

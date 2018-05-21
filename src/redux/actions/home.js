@@ -1,5 +1,6 @@
 import * as actionType from '../action-types';
 import {home_banner} from '../../http-server/home';
+import {GET} from '../../http-server/http-model';
 export const check_lesson=(val,text)=>{
     return {
         type:actionType.CHECK_LESSON,
@@ -15,3 +16,19 @@ export const get_banner=(url,options)=>(dispatch,getState)=>{
         })
     })
 }
+//获取课程列表
+export const get_lesson=(url,options)=>(dispatch,getState)=>(
+    dispatch({
+        type:actionType.AJAX_START
+    }),
+    GET(url,options).then(data=>{
+        const lessonList=data.data;
+        setTimeout(()=>{
+            dispatch({
+                type:actionType.GET_HOME_LESSON_LIST,
+                lessonList
+            })
+        },3000);
+        
+    })
+)

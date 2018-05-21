@@ -1,0 +1,8 @@
+.home {
+  padding: 60px 0; }
+  .home .content {
+    height: 100vh;
+    width: 100%;
+    overflow: scroll; }
+    .home .content img {
+      width: 100%; }
