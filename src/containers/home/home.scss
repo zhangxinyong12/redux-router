@@ -4,8 +4,24 @@
         width: 100%;
         overflow-y: auto;
         overflow-x: hidden;
+        transition: all 2s;
         img{
             width: 100%;
+        }
+        .go-top{
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            i{
+                color: #fff;
+                font-size: 20px;
+            }
         }
     }
 }

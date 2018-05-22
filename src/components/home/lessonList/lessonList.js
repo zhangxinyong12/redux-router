@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './lessonList.css';
 export default class LessonList extends Component {
  
@@ -10,11 +11,14 @@ export default class LessonList extends Component {
         
         <ul>
           {dataList.list.map((item,index)=>(
-            <li key={index}>
-              <img src={item.img} alt=""/>
-              <h4>{item.hosName}</h4>
-              <h5>{item.level}</h5>
-            </li>
+            <Link key={index} to={{pathname:'/detail',state:item}}>
+              <li >
+                <img src={item.img} alt=""/>
+                <h4>{item.hosName}</h4>
+                <h5>{item.level}</h5>
+              </li>
+            </Link>
+            
           ))}
         </ul>
         <div className={dataList.isLoading?'loading':''}>

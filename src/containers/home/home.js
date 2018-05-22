@@ -27,8 +27,21 @@ class Home extends Component {
     let top=this.refs.scroll.scrollTop;
     setsession('home_scrollTop',{top})
   }
-  chooseLesson = (type, text) => {
+  goTop=(speed=300)=>{
+    //默认300ms 返回顶部 计算递减量
+    const x=this.refs.scroll.scrollTop/speed;
+    const time=setInterval(()=>{
+      if(this.refs.scroll.scrollTop>0){
+        this.refs.scroll.scrollTop=(this.refs.scroll.scrollTop-x)<=0?0:this.refs.scroll.scrollTop-x;
+      }else{
+        clearInterval(time);
+      }
+    },1)
+  }
+  chooseLesson = (type, text) => { //选择课程
     this.props.check_lesson(type, text);
+    const url_list = 'http://route.showapi.com/87-60?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc&provinceName=上海';
+    this.props.get_lesson(url_list+'&page=1&limit=5');
   }
   render() {
     let { list, isMore, isLoading } = this.props.home.lessonList;
@@ -46,6 +59,9 @@ class Home extends Component {
             {this.props.home.bannerList ? <HomeBanner dataImg={this.props.home.bannerList} /> : ''}
             <LessonList  dataList={this.props.home.lessonList} />
           </ScrollList>
+          <div onClick={()=>this.goTop()} className='go-top'>
+            <i className='iconfont icon-fanhuidingbu'></i>
+          </div>
         </div>
 
 

@@ -17,7 +17,8 @@ export default (state = init, action) => {
             return {
                 ...state,
                 current: action.val,
-                text: action.text
+                text: action.text,
+                lessonList:init.lessonList
             }
         case actionType.GET_HOME_BANNER_IMG:
             return {
