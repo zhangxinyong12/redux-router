@@ -9,7 +9,7 @@ export default class ScrollList extends Component {
         }
     }
     componentWillReceiveProps(nextProps){
-        
+        console.log(2)
         const url_list = 'http://route.showapi.com/87-60?showapi_appid=32747&showapi_sign=732aec4f8b344e74804bcc060f3a50dc&provinceName=上海';
         if(nextProps.element&&!this.state.isaddEvent){
             nextProps.element.addEventListener('scroll',()=>{
@@ -21,8 +21,7 @@ export default class ScrollList extends Component {
                     if(scrollTop+offsetHeight+120>scrollHeight&&this.props.isMore&&!this.props.isLoading){
                         this.props.get_lesson(url_list+'&page='+this.props.page+'&limit=5');
                     };
-                },30);
-                
+                },30);         
             });
             this.setState({
                 isaddEvent:true
