@@ -1,8 +1,10 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent; }
 
 .con {
   position: absolute;

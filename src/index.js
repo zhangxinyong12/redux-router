@@ -8,6 +8,8 @@ import './index.css';
 import App from './containers/App';
 import store from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
+import initReactFastclick from 'react-fastclick';
+initReactFastclick();
 
 // import vConsole from './vconsole';
 
