@@ -6,10 +6,20 @@ body, html {
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent; }
 
-.con {
+.nav-none {
+  height: 100vh;
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
-  bottom: 61px;
-  width: 100%;
-  overflow: auto; }
+  right: 0;
+  bottom: 0;
+  z-index: 400;
+  background: #fff;
+  overflow-y: auto; }
+
+input, button {
+  border: none;
+  outline: none; }
+
+button {
+  background: #fff; }

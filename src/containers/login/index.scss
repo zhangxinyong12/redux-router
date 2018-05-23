@@ -1,0 +1,57 @@
+.login{
+    margin-top: 60px;
+    >div{
+        >i{
+            display: block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            color:#cdcdcd;
+            font-size: 60px;
+            margin: 60px auto;
+        }
+    }
+    >ul{
+        li{
+            height: 60px;
+            line-height: 60px;
+            padding: 0 15px;
+            text-align: center;
+            input{
+                border: 1px solid #cdcdcd;
+                height: 40px;
+                border-radius: 4px;
+                width: 70%;
+                padding-left: 16px;
+                outline: none;
+                box-sizing: border-box;
+            }
+            input:focus{
+                border-color: blue;
+            }
+            span{
+                display: block;
+                width: 70%;
+                font-size: 14px;
+                color: aquamarine;
+            }
+            button{
+                width: 70%;
+                height: 40px;
+                display: block;
+                margin: 10px auto 0;
+                background: #0284e2;
+                border-radius: 6px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 30px;
+                text-align: center;
+                box-sizing: border-box;
+                padding-left: 30px;
+            }
+        }
+    }
+}

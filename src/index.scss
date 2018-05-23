@@ -6,11 +6,23 @@ body,html {
   -webkit-overflow-scrolling : touch;
   -webkit-tap-highlight-color: transparent;
 }
-.con{
-  position: absolute;
-  top:60px;
-  left: 0;
-  bottom: 61px;
-  width: 100%;
-  overflow: auto;
+//这里放公共的css样式
+.nav-none{
+  height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 400;
+    background: #fff;
+    overflow-y: auto;
+    
+}
+input,button{
+  border: none;
+  outline: none;
+}
+button{
+  background: #fff;
 }

@@ -1,0 +1,51 @@
+.user{
+    .top{
+        height: 300px;
+        background: #879687;
+        overflow: hidden;
+        i{
+            display: block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            background: #fff;
+            color: #cdcdcd;
+            font-size: 60px;
+            margin: 100px auto 0;
+        }
+        a{
+            display: inline-block;
+            width: 100%;
+            margin-top: 40px;
+            span{
+                display: block;
+                margin: 0 auto;
+                width: 60px;
+                height: 30px;
+                color: green;
+                background: #fff;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 5px;
+                font-weight:bold;
+            }
+        }
+    }
+    ul{
+        margin-top: 20px;
+        li{
+            height: 80px;
+            line-height: 80px;
+            border-bottom: 1px solid #000;
+            padding: 0 20px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.BackHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    header{
+        height: 60px;
+        background: red;
+        h2{
+            font-size: 18px;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            font-weight: normal;
+            color: #fff;
+        }
+        span{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: 26px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+}

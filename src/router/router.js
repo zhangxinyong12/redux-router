@@ -5,7 +5,8 @@ import Home from '../containers/home/home';
 import Product from '../containers/product/product';
 import User from '../containers/user/user';
 import Detail from '../containers/detail/detail';
-
+import Register from '../containers/register';
+import Login from '../containers/login';
 export default class Routers extends Component {
   render() {
     return (
@@ -13,8 +14,11 @@ export default class Routers extends Component {
         <Switch>
           <Route exact path='/'  component={Home}/>
           <Route  path='/product'  component={Product}/>
+          <Route  path='/detail'  component={Detail}/>
           <Route  path='/user'  component={User}/>          
-          <Route  path='/detail'  component={Detail}/>          
+          <Route  path='/register'  component={Register}/>          
+          <Route  path='/login'  component={Login}/>          
+          <Route  path='/register'  component={Register}/>          
         </Switch>
       </div>
         
