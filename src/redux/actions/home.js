@@ -16,7 +16,7 @@ export const get_banner=(url,options)=>(dispatch,getState)=>{
         })
     })
 }
-//获取课程列表
+//获取列表
 export const get_lesson=(url)=>(dispatch,getState)=>(
     dispatch({
         type:actionType.AJAX_START

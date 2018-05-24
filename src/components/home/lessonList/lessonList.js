@@ -7,8 +7,7 @@ export default class LessonList extends Component {
     const {dataList}=this.props;
     return (
       <div className='lessonList'>
-        <h3>课程列表</h3>
-        
+        <h3>列表</h3>
         <ul>
           {dataList.list.map((item,index)=>(
             <Link key={index} to={{pathname:'/detail',state:item}}>

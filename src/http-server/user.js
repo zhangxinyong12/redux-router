@@ -1,8 +1,9 @@
 import {GET,POST} from './http-model';
 import {setsession,getsession} from '../utils';//session 模拟ajax请求
+//封装成promise
 export const set_user=(user)=>{
     const {username}=getsession('user');
-    if(username==='123456'){
+    if(user.username==='123456'){
         return {err:'用户已经存在'};
     }else{
         setsession('user',user)
@@ -10,7 +11,7 @@ export const set_user=(user)=>{
     }
 }
 export const get_user=(user)=>{
-    const {username,password}=getsession('user');
+    const {username,password}=getsession('user')||{};
     if(username!==user['username']||password!==user['password']){
         return {err:'用户名或密码错误'};
     }else{

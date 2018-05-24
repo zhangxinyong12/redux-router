@@ -2,15 +2,27 @@ import React, { Component } from 'react';
 import{connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import User from '../../components/user';
-
+import {setsession,getsession} from '../../utils';
+import * as action from '../../redux/actions/user';
 import './user.css';
 class Usercon extends Component {
+  componentWillMount(){//默认存储一个
+    console.log(this.props)
+    const user={
+      username:'123456',
+      password:'123456'
+    }
+    setsession('user',user);
+    const {username}=getsession('user');
+  }
   render() {
     return (
       <div className='user'>
         <div className='top'>
           <i className='iconfont icon-touxiang'></i>
-          <Link to='/login'><span>登陆</span></Link>
+          {this.props.user.userInfo.user?<h2>{this.props.user.userInfo.user}</h2>:
+            <Link to='/login'><span>登陆</span></Link>}
+          
         </div>
         <ul>
           <li>
@@ -33,4 +45,4 @@ class Usercon extends Component {
     )
   }
 }
-export default connect()(Usercon)
+export default connect(state=>({...state}),action)(Usercon)
