@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import * as action from '../../redux/actions/user';
 import BackHeader from '../../common/backHeader';
 import {Link} from 'react-router-dom';
-
+// import { Button } from 'antd';
+import Button from 'antd/lib/button';
 import './index.css';
 class Login extends Component {
   componentDidMount(){
@@ -28,6 +29,7 @@ class Login extends Component {
         <BackHeader title='登陆' />
         <div>
           <i className='iconfont icon-touxiang'></i>
+          
         </div>
         <ul>
           <li>
@@ -37,10 +39,10 @@ class Login extends Component {
             <input type="text" placeholder='请输入密码' ref={element=>this.password=element}/>
           </li>
           <li>
-            <Link to='/register'><span>没有账号，马上注册</span></Link>
+            <Link to='/register'><span className='reg'>没有账号，马上注册</span></Link>
           </li>
           <li>
-            <button onClick={this.goLogin} >登陆</button>
+            <Button type="primary" onClick={this.goLogin}>登陆</Button>
           </li>
           <li>
             <h3>{this.props.user.err.err}</h3>

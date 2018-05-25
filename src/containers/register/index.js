@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import BackHeader from '../../common/backHeader';
 import * as action from '../../redux/actions/user';
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 import './index.css';
 class Register extends Component {
 
@@ -33,7 +34,7 @@ class Register extends Component {
             <input type="text" placeholder='请输入密码' ref={element => this.password = element} />
           </li>
           <li>
-            <button onClick={this.goRegister}>注册</button>
+            <Button type="primary" onClick={this.goRegister}>注册</Button>
           </li>
         </ul>
       </div>

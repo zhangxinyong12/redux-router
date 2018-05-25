@@ -31,7 +31,7 @@
       box-sizing: border-box; }
     .login > ul li input:focus {
       border-color: blue; }
-    .login > ul li span {
+    .login > ul li .reg {
       display: block;
       width: 70%;
       font-size: 14px;
