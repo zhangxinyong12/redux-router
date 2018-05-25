@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './product.css';
+import BackHeader from '../../common/backHeader';
 
-import Banner from '../../components/product/banner';
+import './product.css';
 
 class Product extends Component {
   componentDidMount() {
@@ -19,9 +19,10 @@ class Product extends Component {
   render() {
     return (
       <div className='product'>
-        <Banner />
-        <div id='map'>
-
+        <BackHeader title='地图' />
+      
+        <div id='map-box'>
+          <div id='map'></div>
         </div>
       </div>
     )

@@ -14,7 +14,7 @@ export default class DetailCom extends Component {
           <span >
             官网地址:{hosLink}
           </span>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;电话：<a href={'tel'+tele}>{tele}</a></p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;电话：<a href={'tel:'+tele}>{tele}</a></p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;{'简介:'+info}</p>
           
         </div>

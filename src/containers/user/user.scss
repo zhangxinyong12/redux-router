@@ -1,3 +1,6 @@
+#user{
+    
+}
 .user{
     .top{
         height: 300px;
@@ -44,6 +47,9 @@
     }
     ul{
         margin-top: 20px;
+        height: calc(100vh - 320px);
+        overflow-y: auto;
+        padding-bottom: 60px;
         li{
             height: 80px;
             line-height: 80px;
@@ -55,6 +61,9 @@
             i{
                 font-size: 20px;
             }
+        }
+        li:nth-last-child(){
+            border: none;
         }
     }
 }
