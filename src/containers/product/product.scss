@@ -1,0 +1,14 @@
+.product{
+    .banner,.swiper-wrapper{
+        height: 300px;
+    }
+    #map{
+        width: calc(100% - 20px);
+        margin: 10px;
+        height: calc(100vh - 380px);
+        .amap-logo,.amap-copyright{//隐藏地图logo信息
+            display: none!important
+        }
+    }
+    
+}
