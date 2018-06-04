@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route,Switch} from 'react-router-dom';
+import {Route,Switch,Redirect} from 'react-router-dom';
 
 import Home from '../containers/home/home';
 import Product from '../containers/product/product';
@@ -13,6 +13,7 @@ export default class Routers extends Component {
       <div>
         <Switch>
           <Route exact path='/'  component={Home}/>
+          <Route  path='/home'  render={()=><Redirect to="/"/>} />
           <Route  path='/product'  component={Product}/>
           <Route  path='/detail'  component={Detail}/>
           <Route  path='/user'  component={User}/>          
